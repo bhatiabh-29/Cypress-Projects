@@ -1,0 +1,17 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Deployment stage
+        run: 
+          "echo- Deployment stage completed"
